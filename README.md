@@ -45,7 +45,7 @@ If you are using a virtual environment, activate it first and then install Manim
 From the project folder, run:
 
 ```bash
-manim -pql link-list.py Linklist
+python -m manim -pqk -r 1920,1080 link-list.py Linklist
 ```
 
 This renders the scene and generates the output inside the `media/` folder.

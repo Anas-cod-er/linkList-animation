@@ -6,23 +6,23 @@ class Linklist(Scene):
         #create node
         node1 = VGroup(
             Square(side_length=1),
-            Text("1")
+            Text("10")
         )
         node2 = VGroup(
             Square(side_length=1),
-            Text("2")
+            Text("20")
         )
         node3 = VGroup(
             Square(side_length=1),
-            Text("3")
+            Text("30")
         )
         node4 = VGroup(
             Square(side_length=1),
-            Text("4")
+            Text("40")
         )
         node5 = VGroup(
-            Square(side_length=1),
-            Text("5")
+            Square(side_length=1.5),
+            Text("Null")
         )
 
 
@@ -55,19 +55,30 @@ class Linklist(Scene):
             buff=0.1
         )
 
-        #animate nodes
+        #create text
+        text = Text("Single Link List")
+        text.to_edge(DOWN)
+
+        #animate text
+        self.play(Write(text))
+
+        #animate nodes and arrow
 
         self.play(Create(node1))
+        self.play(Create(arrow1))
+
         self.play(Create(node2))
+        self.play(Create(arrow2))
+        
         self.play(Create(node3))
+        self.play(Create(arrow3))
+
         self.play(Create(node4))
+        self.play(Create(arrow4))
+
         self.play(Create(node5))
 
-        #animate arrows
-        self.play(Create(arrow1))
-        self.play(Create(arrow2))
-        self.play(Create(arrow3))
-        self.play(Create(arrow4))
+        
 
         self.wait(2)
 
